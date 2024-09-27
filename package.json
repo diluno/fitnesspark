@@ -1,0 +1,14 @@
+{
+  "name": "fitnesspark",
+  "version": "1.0.0",
+  "description": "fitnesspark tracka",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonfile": "^6.1.0"
+  }
+}
