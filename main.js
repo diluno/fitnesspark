@@ -50,7 +50,7 @@ fetch(
             temperature: temp,
             visitors: data,
           };
-          const file = `./data/${park.slug}.json`;
+          const file = `data/${park.slug}.json`;
 
           jsonfile.readFile(file, function (err, obj) {
             if (err) console.error(err);
