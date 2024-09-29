@@ -34,6 +34,7 @@ const parks = [
 ];
 
 const timestamp = Date.now();
+console.log(__dirname);
 let temp = 0;
 fetch(
   'https://api.open-meteo.com/v1/forecast?latitude=47.3667&longitude=8.55&current=temperature_2m'
@@ -50,7 +51,7 @@ fetch(
             temperature: temp,
             visitors: data,
           };
-          const file = `data/${park.slug}.json`;
+          const file = `${__dirname}/data/${park.slug}.json`;
 
           jsonfile.readFile(file, function (err, obj) {
             if (err) console.error(err);
@@ -59,14 +60,6 @@ fetch(
               if (err) console.error(err);
             });
           });
-          // jsonfile.writeFile(
-          //   `./data/${park.slug}.json`,
-          //   obj,
-          //   { flag: 'a' },
-          //   function (err) {
-          //     if (err) console.error(err);
-          //   }
-          // );
         });
     });
   });
