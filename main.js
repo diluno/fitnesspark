@@ -34,7 +34,6 @@ const parks = [
 ];
 
 const timestamp = Date.now();
-console.log(__dirname);
 let temp = 0;
 fetch(
   'https://api.open-meteo.com/v1/forecast?latitude=47.3667&longitude=8.55&current=temperature_2m'
